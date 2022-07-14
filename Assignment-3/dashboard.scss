@@ -1,0 +1,948 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import "text-color.scss";
+@import "background-color.scss";
+@import "dots-bg-color.scss";
+@import "font-size.scss";
+
+
+html {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  overflow-y: scroll;
+}
+
+
+$menu-width-desktop: 240px;
+$menu-width-tablet: 90px;
+$menu-width-smartphone: 230px;
+
+body {
+  background: $bg-color-4th;
+  margin: 0;
+  font-family: Poppins, sans-serif;
+  color: $color-1st;
+  padding-left: $menu-width-desktop;
+}
+
+// -------------------- Left side menu ----------------------------------------------------
+main {
+  position: relative;
+  bottom: 100px;
+  right: 93px;
+  height: 100vh;
+}
+
+.menu {
+  background: $bg-color-6th;
+  height: 233vh;
+  width: $menu-width-desktop;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  outline: none;
+
+  .header {
+    padding: 2em 0.5em;
+    text-align: center;
+
+    .alex {
+      width: 100px;
+      overflow: hidden;
+      
+    }
+
+    h2 {
+      font-weight: normal;
+      font-size: 14px;
+      margin: 0;
+      margin-bottom: 0;
+      color: $color-1st;
+    }
+    p {
+      font-size: 12px;
+      font-weight: lighter;
+      margin-top: 0px;
+      color: $color-1st;
+      opacity: 0.5;
+    }
+  }
+
+  ul.sidebar-menu {
+    margin: 0;
+    padding: 0;
+    max-width: 400px;
+    list-style: none;
+    list-style-type: none;
+  }
+
+  .sidebar-menu li a span {
+    margin-right: 47px;
+    color: $color-1st;
+  }
+
+  .sidebar-menu li a {
+    padding: 18px 18px;
+    display: block;
+    font-size: 14px;
+    text-decoration: none;
+    color: $color-1st;
+  }
+
+  .sidebar-menu li a:hover {
+    background-color: gba(0, 0, 0, 0.2);
+    display: block;
+    text-decoration: none;
+    color: $color-1st;
+  }
+
+  li.have-children ul {
+    // padding: 0px;
+    list-style-type: disc;
+    padding-left: 87px;
+  }
+  li.have-children span img {
+    top: 17px;
+    left: 24px;
+    position: absolute;
+  }
+
+  li.have-children ul li a {
+    font-size: 10px;
+    margin: 0;
+    padding: 0;
+  }
+
+  li.have-children ul li a:hover {
+    color: $color-1st;
+    // background-color: #52565d;
+    padding-left: 50px;
+  }
+
+  li.have-children,
+  li {
+    position: relative;
+  }
+
+  .have-children span::after {
+    position: absolute;
+    right: 30px;
+    top: 24px;
+    content: url(images/Path\ 218.png);
+    color: $color-1st;
+    transition: all 0.5s;
+  }
+
+  li.active.have-children span::after {
+    transform: rotate(90deg);
+  }
+
+  .sidebar-menu .have-children > ul {
+    display: none;
+  }
+}
+// ---------------- Fries Menu ------------------------------
+.fries-menu {
+  top: 35px;
+  left: 34px;
+  position: absolute;
+}
+
+.top-nav {
+  background-color: $bg-color-4th;
+  opacity: 1;
+  width: 1366px;
+  margin-top: 0px;
+  padding-top: 60px;
+  left: 242px;
+  position: absolute;
+}
+.hamburger-menu {
+  background: $bg-color-7th 0% 0% no-repeat padding-box;
+  box-shadow: 10px 17px 50px rgb(171 163 214 / 15%);
+  opacity: 1;
+  height: 85px;
+  width: 1373px;
+  margin-top: -58px;
+  padding-top: -19px;
+}
+.logo {
+  margin-left: 67px;
+  margin-top: 16px;
+}
+
+.heading {
+  margin-left: 34px;
+  font-size: larger;
+  font-weight: bolder;
+  float: left;
+  margin-top: 23px;
+  color: $color-3rd;
+}
+
+.bell-icon{
+  width: 20px;
+  height: 24px;
+  margin-left: 1150px;
+}
+
+.bell-dot{
+  height: 7px;
+  width: 7px;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+    top: -8px;
+    right: 12px;
+}
+
+
+// ----------------------------Cards------------------------------------------
+
+.round1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -15px;
+  margin-left: 57px;
+  flex-direction: column;
+  background-color: $bg-color-1st;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+}
+.round2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -15px;
+  margin-left: 57px;
+  flex-direction: column;
+  background-color: $bg-color-2nd;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+}
+.round3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -15px;
+  margin-left: 57px;
+  flex-direction: column;
+  background-color: $bg-color-3rd;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+}
+.round4 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -15px;
+  margin-left: 57px;
+  flex-direction: column;
+  background-color: $bg-color-5th;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+}
+.py-5 {
+  padding-bottom: 5rem !important;
+  margin-top: 58px;
+}
+h5 {
+  font-size: 14px;
+  color: black;
+}
+.status {
+  font-size: 30px;
+  margin: 0;
+  color: $color-3rd;
+  font-weight: bold;
+}
+.content {
+  font-size: 10px;
+  font-weight: 100;
+  margin-bottom: -32px;
+  color: $color-2nd;
+}
+.time {
+  font-size: 16px;
+  font-weight: 400;
+  color: $color-2nd;
+}
+.row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  padding: 0px;
+  flex-wrap: wrap;
+  margin-right: 100px;
+  margin-left: -16px;
+}
+// ----------------------------chart & calendars--------------------------------------------
+table {
+  border-collapse: collapse;
+  background: $bg-color-7th;
+  left: 10px;
+  color: $color-3rd;
+  top: -20px;
+  position: relative;
+}
+
+th,
+td {
+  white-space: 10px;
+  font-weight: bold;
+  padding: 11px;
+  font-size: 10px;
+}
+.left {
+  margin-right: 256px;
+  margin-top: -63px;
+}
+.right {
+  margin-left: 242px;
+  margin-top: -63px;
+}
+.chart-calendar {
+  position: relative;
+  height: 64vh;
+}
+.chart-calendar .row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-top: -458px;
+  margin-right: -241px;
+}
+.chart-calendar .py-5 {
+  padding-bottom: rem !important;
+  margin-top: 58px;
+}
+h3 {
+  margin-top: -51px;
+  font-weight: bolder;
+  font-size: 14px;
+  color: $color-3rd;
+}
+.dot1 {
+  height: 9px;
+  width: 9px;
+  position: absolute;
+  left: 60px;
+  top: 331px;
+  background: $dot-bg-color-7;
+  border-radius: 50%;
+}
+.holiday {
+  color: $color-13th;
+  font-size: 9px;
+  top: -2px;
+  left: -4px;
+  position: absolute;
+  width: 122px;
+}
+.dot2 {
+  height: 9px;
+  width: 9px;
+  position: absolute;
+  left: 188px;
+  top: 331px;
+  background: $dot-bg-color-8;
+  border-radius: 50%;
+}
+.meeting {
+  color: $color-13th;
+  font-size: 9px;
+  margin: 0;
+  position: absolute;
+  top: -2px;
+  left: -11px;
+  /* right: -12px; */
+  width: 122px;
+}
+.dot3 {
+  height: 9px;
+  width: 9px;
+  position: absolute;
+  left: 60px;
+  top: 347px;
+  background: $dot-bg-color-9;
+  border-radius: 50%;
+}
+.session {
+  color: $color-13th;
+  font-size: 9px;
+  top: -2px;
+  left: -8px;
+  position: absolute;
+  width: 122px;
+}
+.dot4 {
+  height: 5px;
+  width: 5px;
+  position: absolute;
+  left: 191px;
+  top: 85px;
+  background: $dot-bg-color-2;
+  border-radius: 50%;
+}
+.dot5 {
+  height: 5px;
+  width: 5px;
+  position: absolute;
+  left: 55px;
+  top: 119px;
+  background: $dot-bg-color-3;
+  border-radius: 50%;
+}
+.dot6 {
+  height: 5px;
+  width: 5px;
+  position: absolute;
+  left: 193px;
+  top: 156px;
+  background: $dot-bg-color-4;
+  border-radius: 50%;
+}
+.dot7 {
+  height: 5px;
+  width: 5px;
+  position: absolute;
+  left: 90px;
+  top: 194px;
+  background: $dot-bg-color-4;
+  border-radius: 50%;
+}
+.dot8 {
+  height: 24px;
+  width: 26px;
+  position: absolute;
+  left: 140px;
+  top: 80px;
+  border: 2px solid $dot-bg-color-10;
+  border-radius: 50%;
+}
+#multi-line-chart {
+  position: relative;
+  top: 19px;
+}
+.revenue {
+  font-size: 14px;
+  font-weight: bolder;
+  color: $color-3rd;
+  margin-top: -28px;
+  margin-left: -118px;
+}
+.count {
+  color: $color-9th;
+  font-size: 12px;
+  font-weight: 100;
+  top: 78px;
+  left: 187px;
+  position: absolute;
+}
+#single-line-chart {
+  position: relative;
+  top: -3px;
+}
+.x-axis {
+  font-size: 11px;
+  color: $color-9th;
+}
+
+// -----------------------------------Project history table-------------------------------------------------
+.project-history-table {
+  background-color: $bg-color-7th;
+  display: flex;
+  /* position: absolute; */
+  margin-left: 96px;
+  border-collapse: collapse;
+  margin-top: 73px;
+  width: 80%;
+  border-spacing: 20px;
+  border-color: $color-1st;
+  /* margin: 0 auto; */
+  padding: 0px;
+}
+.project-table {
+  width: 72.5%;
+  display: flex;
+  position: absolute;
+  top: 822px;
+  margin-left: 36px;
+  /* float: left; */
+  /* margin-top: 0px; */
+  height: 621px;
+  background-color: $bg-color-7th;
+}
+.table-caption {
+  padding-bottom: 15px;
+}
+.project-history-table td {
+  padding: 12px;
+  vertical-align: middle;
+}
+
+.project-history-table tr {
+  border-bottom: 1px solid $color-2nd;
+}
+
+.table-caption .p1 {
+  color: $color-3rd;
+  text-align: left;
+  font-size: 16px;
+  /* margin-bottom: 5px; */
+}
+
+.table-caption .p2 {
+  color: $color-2nd;
+  font-size: 13px;
+  text-align: left;
+  /* margin-bottom: 20px; */
+}
+
+.table-header {
+  color: #ada9bf;
+  font-size: 14px;
+  text-align: left;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+.project-history-table td .table-dot-1 {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  background-color: $dot-bg-color-6 ;
+}
+
+.project-history-table td .table-dot-2 {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  background-color: $dot-bg-color-5 ;
+}
+
+.indicator-1 {
+  height: 7px;
+  width: 7px;
+  border-radius: 50%;
+  display: inline-block;
+  background-color: $dot-bg-color-5 ;
+}
+
+.indicator-2 {
+  height: 7px;
+  width: 7px;
+  border-radius: 50%;
+  display: inline-block;
+  background-color: $dot-bg-color-6 ;
+}
+.project-history-table .align-dot {
+  text-align: center;
+}
+
+.para {
+  line-height: 7px;
+}
+.project-history-table .status {
+  color: #ada9bf;
+  font-size: 8px;
+  padding-right: 26px;
+}
+
+.project-history-table .sp1 {
+  color: $color-2nd;
+  font-size: 10px;
+}
+.project-history-table .year {
+  color: $color-3rd;
+  font-size: 10px;
+}
+
+.project-history-table .top-container {
+  padding-left: 510px;
+}
+
+.project-history-table .dropdown {
+  width: 8px;
+  height: 5px;
+}
+
+.pagination {
+  margin-top: -52px;
+  margin-left: 436px;
+}
+
+.pagination a {
+  color: $color-3rd;
+  /* float: left; */
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+.page-display {
+  display: inline-block;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: $color-5th;
+  font-size: 13px;
+}
+
+// -------------------------Right side -----------------------------------------
+
+$menu-width-desktop: 300px;
+$menu-width-tablet: 90px;
+$menu-width-smartphone: 230px;
+
+.right-menu {
+  background: $bg-color-7th;
+  height: 219vh;
+  position: absolute;
+  width: 300px;
+  float: left;
+  top: 87px;
+  /* bottom: 1052px; */
+  left: 1074px;
+  z-index: 5;
+  outline: none;
+}
+// ___-______----
+.skills {
+  display: block;
+  height: 216px;
+  width: 300px;
+  color: $color-3rd;
+}
+.Mine {
+  font-size: 16px;
+  font-weight: bolder;
+  margin-left: 25px;
+}
+.update {
+  margin-left: 134px;
+  font-size: 12px;
+  color: $color-4th;
+}
+.adbe {
+  position: absolute;
+  margin-left: -31px;
+  margin-top: -2px;
+}
+.adobe {
+  font-size: 12px;
+  margin-top: 27px;
+  margin-left: 59px;
+}
+.percent {
+  font-size: 12px;
+  margin-left: 114px;
+}
+.percent2 {
+  font-size: 12px;
+  margin-top: -4px;
+  float: right;
+  margin-right: 41px;
+}
+.announce {
+  margin-top: 33px;
+  display: block;
+  width: 300px;
+  height: 295px;
+}
+.announcement {
+  font-size: 16px;
+  margin-left: 25px;
+  font-weight: bolder;
+  color: $color-3rd;
+}
+.awards {
+  font-size: 12px;
+  color: $color-3rd;
+  margin-left: 25px;
+}
+.client {
+  font-size: 12px;
+  color: $color-6th;
+  float: right;
+  margin-top: -34px;
+  margin-right: 43px;
+}
+.violet {
+  size: 13px;
+  top: 294px;
+  margin-left: 25px;
+  position: absolute;
+  width: 100px;
+  color: #5a4796;
+}
+.maskgrp {
+  width: 251px;
+  margin-left: 25px;
+  height: 220px;
+}
+.name {
+  background: $bg-color-8th;
+  width: 251px;
+  top: 492px;
+  height: 51px;
+  position: absolute;
+  right: 24px;
+}
+.name .employee {
+  font-size: 14px;
+  color: $color-1st;
+  margin-top: 8px;
+  margin-left: 20px;
+}
+.name .role {
+  font-size: 12px;
+  float: left;
+  color: $color-1st;
+  opacity: 0.5;
+  margin-top: -16px;
+  margin-left: 20px;
+}
+.leftarrow {
+  margin-right: 42px;
+  float: right;
+  margin-top: -24px;
+}
+.rightarrow {
+  margin-right: 12px;
+  margin-top: -24px;
+  float: right;
+}
+.comments {
+  margin-top: 31px;
+  display: block;
+  width: 300px;
+  height: 403px;
+  background-color: $bg-color-7th;
+}
+.alexander1 {
+  font-size: 12px;
+}
+.person1 {
+  margin-top: 20px;
+  margin-left: -119px;
+}
+.person-name1 {
+  font-size: 12px;
+  float: left;
+  margin-left: 91px;
+  margin-top: 17px;
+  color: $color-3rd;
+}
+.quote1 {
+  font-size: 10px;
+  float: left;
+  margin-left: 88px;
+  margin-top: -23px;
+  color: $color-6th;
+}
+.duration1 {
+  font-size: 10px;
+  float: left;
+  margin-left: 90px;
+  margin-top: -3px;
+  color: $color-6th;
+}
+.reply1 {
+  font-size: 10px;
+  float: right;
+  margin-right: 96px;
+  margin-top: -3px;
+  color: $color-4th;
+}
+.heart1 {
+  float: right;
+  margin-top: -52px;
+  margin-right: -82px;
+}
+.black1 {
+  color: $color-6th;
+  size: 37px;
+  top: 640px;
+  margin-left: 29px;
+  position: absolute;
+  width: 239px;
+}
+
+.person2 {
+  margin-left: -117px;
+  margin-top: 21px;
+}
+.person-name2 {
+  font-size: 12px;
+  float: left;
+  margin-left: 91px;
+  margin-top: 36px;
+  color: $color-3rd;
+}
+.quote2 {
+  font-size: 10px;
+  float: left;
+  margin-left: 89px;
+  margin-top: 6px;
+  color: $color-6th;
+}
+.duration2 {
+  font-size: 10px;
+  float: left;
+  margin-left: 90px;
+  margin-top: 4px;
+  color: $color-6th;
+}
+.heart2 {
+  float: right;
+  margin-top: -47px;
+  margin-right: 36px;
+}
+.black2 {
+  color: $color-6th;
+  size: 37px;
+  top: 802px;
+  margin-left: 29px;
+  position: absolute;
+  width: 239px;
+}
+.merlin {
+  margin-left: -115px;
+  margin-top: 35px;
+}
+#comment {
+  background-color: $bg-color-10th;
+  border: none;
+  border-radius: 25px;
+  width: 126px;
+  height: 25px;
+  text-align: center;
+  margin-left: 97px;
+  float: left;
+  margin-top: -40px;
+  font-size: 10px;
+  color: $color-7th;
+}
+#post {
+  background: $bg-color-9th;
+  font-size: 11px;
+  float: right;
+  border: none;
+  margin-right: 24px;
+  height: 26px;
+  margin-top: -41px;
+  color: $color-1st;
+}
+
+.person4 {
+  margin-left: -130px;
+  margin-top: 12px;
+}
+.person-name3 {
+  font-size: 12px;
+  float: left;
+  margin-left: 91px;
+  margin-top: 28px;
+  color: $color-3rd;
+}
+.quote3 {
+  font-size: 10px;
+  float: left;
+  margin-left: 89px;
+  margin-top: -5px;
+  color: $color-6th;
+}
+.duration3 {
+  font-size: 10px;
+  float: left;
+  margin-left: 90px;
+  margin-top: 4px;
+  color: $color-6th;
+}
+.reply2 {
+  font-size: 10px;
+  float: right;
+  margin-right: 86px;
+  margin-top: 4px;
+  color: $color-4th;
+}
+.heart3 {
+  float: right;
+  margin-top: -70px;
+  margin-right: 36px;
+}
+.black3 {
+  color: $color-6th;
+  size: 37px;
+  top: 910px;
+  margin-left: 29px;
+  position: absolute;
+  width: 239px;
+}
+
+.links {
+  margin-top: 21px;
+  width: 300px;
+  height: 216px;
+  //   background-color: cadetblue;
+}
+.quick {
+  font-size: 16px;
+  margin-left: 25px;
+  color: $color-3rd;
+}
+.aspire {
+  font-size: 13px;
+  margin-left: 25px;
+  color: $color-5th;
+}
+.weblink {
+  font-size: 10px;
+  float: left;
+  margin-left: 25px;
+  color: $color-4th;
+}
+.smartvalue {
+  /* margin-left: 40px; */
+  float: right;
+  margin-top: -13px;
+  width: 89px;
+}
+.mediclaim {
+  font-size: 13px;
+  margin-left: 25px;
+  float: left;
+  margin-top: 36px;
+  color: $color-5th;
+}
+.weblink2 {
+  font-size: 10px;
+  float: left;
+  margin-top: 1px;
+  margin-left: 25px;
+  color: $color-4th;
+}
+.benpal {
+  /* margin-left: 40px; */
+  float: right;
+  margin-right: 18px;
+  margin-top: -16px;
+  width: 53px;
+}
+.footer {
+  width: 117px;
+  margin-top: 193px;
+  margin-left: 477px;
+}
+.copyright {
+  font-size: 10px;
+  color: $color-8th;
+}
